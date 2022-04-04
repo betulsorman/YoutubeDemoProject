@@ -1,5 +1,5 @@
-<h1>BestBuy Web App Otomasyon Projesi</h1>
-Bu proje bestbuy web uygulaması otomasyonunu içermektedir. 
+<h1>Youtube Web App Otomasyon Projesi</h1>
+Bu proje youtube web uygulaması otomasyonunu içermektedir. 
 <h2>Tool stack</h2>
 
 * Ruby
