@@ -24,39 +24,6 @@ Bu proje bestbuy web uygulaması otomasyonunu içermektedir.
 
 <h3>Proje yapısı</h3>
 
-├── Gemfile
-├── Gemfile.lock
-├── README.md
-└── features
-├── config
-│   └── base_config.rb
-├── model
-│   └── account_model.rb
-├── pages
-│   ├── filter_page.rb
-│   ├── gmail_page.rb
-│   ├── home_page.rb
-│   ├── login_page.rb
-│   ├── product_page.rb
-│   └── search_page.rb
-├── step_definitions
-│   ├── filter_page_steps.rb
-│   ├── general_steps.rb
-│   ├── gmail_page_steps.rb
-│   ├── home_page_steps.rb
-│   ├── login_page_steps.rb
-│   ├── product_page_steps.rb
-│   └── search_page_steps.rb
-├── support
-│   ├── env.rb
-│   └── hooks.rb
-├── test
-│   └── test.feature
-└── utils
-├── driver.rb
-└── helper.rb
-
-
 
 ```
 Given ön koşul
