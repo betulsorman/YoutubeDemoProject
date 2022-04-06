@@ -13,6 +13,7 @@ class VideoDetailPage
     @video_stream_css = ".video-stream"
     @time_current_css = ".ytp-time-current"
     @time_end_css = ".ytp-time-duration"
+    @skip_trial_xpath = "//*[@aria-label='Skip trial']"
   end
 
   def skip_ads_function
@@ -92,9 +93,11 @@ class VideoDetailPage
 
     puts min_end.to_i - min_current.to_i
     calculate_wait_time = ((hour_end.to_i - hour_current.to_i) * 60 * 60) + ((min_end.to_i - min_current.to_i) * 60) + (sec_end.to_i - sec_current.to_i)
-    sleep calculate_wait_time
+    sleep calculate_wait_time + 1
 
-    expect(find(@time_current_css).text).to eq(time_end_text)
+    time_current_text_on_video_finish = find(@time_current_css).text
+
+    expect(time_current_text_on_video_finish).to eq(time_end_text)
 
   end
 
@@ -114,6 +117,12 @@ class VideoDetailPage
       page.should_not have_selector(@skip_ad_button_css, wait: 5)
     else
       puts "The video has started."
+    end
+  end
+
+  def skip_trial
+    if page.has_selector?(:xpath, @skip_trial_xpath)
+      find(:xpath, @skip_trial_xpath).click
     end
   end
 

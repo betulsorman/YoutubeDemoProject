@@ -44,3 +44,7 @@ end
 And(/^verify replay button$/) do
   video_detail_page.verify_replay_button
 end
+
+And(/^skip trial$/) do
+  video_detail_page.skip_trial
+end
